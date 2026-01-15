@@ -17,7 +17,7 @@ from database import (
 # Initialize FastAPI app
 app = FastAPI(title="Voice Assistant API", version="1.0.0")
 
-# Enable CORS for React frontend m
+# Enable CORS for React frontend 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],  # React dev server
