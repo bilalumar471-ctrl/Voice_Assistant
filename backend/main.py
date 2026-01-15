@@ -1,8 +1,3 @@
-"""
-FastAPI Backend for Voice Assistant
-Handles conversation management and AI responses
-"""
-
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel

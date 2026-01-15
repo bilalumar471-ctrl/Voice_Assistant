@@ -1,7 +1,3 @@
-"""
-OpenAI Service - Handles both mock and real AI responses
-"""
-
 import os
 import random
 import time
@@ -11,7 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Initialize OpenAI client (won't be used in mock mode)
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", "sk-mock-key"))
 
 # Mock responses for testing without API
@@ -37,10 +32,7 @@ FAREWELL_RESPONSES = [
 
 
 def get_mock_response(messages: List[Dict]) -> str:
-    """
-    Generate mock responses based on user input
-    Simulates realistic delay and context-aware responses
-    """
+
     # Simulate API delay
     time.sleep(random.uniform(0.5, 1.5))
     
@@ -80,9 +72,7 @@ def get_mock_response(messages: List[Dict]) -> str:
 
 
 def get_openai_response(messages: List[Dict]) -> str:
-    """
-    Get real response from OpenAI API
-    """
+
     try:
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",  # or "gpt-4" if you have access

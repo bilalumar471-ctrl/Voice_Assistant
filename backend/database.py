@@ -1,7 +1,3 @@
-"""
-Database module - MongoDB connection and operations
-"""
-
 import os
 from datetime import datetime
 from typing import List, Dict, Optional
